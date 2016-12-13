@@ -1,0 +1,7 @@
+-r base.txt
+django-debug-toolbar==1.3.0
+ipython
+pytest-django==2.7.0
+pytest-xdist==1.11
+pytest-cov==1.8.0
+tornado==4.0.2

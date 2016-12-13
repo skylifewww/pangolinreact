@@ -1,0 +1,95 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+{# {% load i18n mptt_tags %} #}
+{% load thumbnail %}
+{% load content_tags %}
+
+{% block support %}
+
+
+
+
+    
+   
+  
+    <!-- Subscribe Section-->
+    <section id="subscribe" class="section-small bg-img5 text-center">
+    <div class="small-header bg-white"></div>
+      <div class="overlay-white"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-offset-2">
+            <h3>Subscribe</h3>
+            <h5>Sign-Up For News Updates and Alerts</h5>
+            <!-- MailChimp Signup Form - Replace the form action in the line below with your MailChimp embed action! For more information on how to do this please visit the Docs!-->
+            <form id="mc-embedded-subscribe-form" action="http://pangolin.com" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="form-inline subscribe-form">
+              <div class="input-group input-group-lg">
+                <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Email address..." class="form-control"><span class="input-group-btn">
+                  <button id="mc-embedded-subscribe" type="submit" name="subscribe" class="btn btn-dark">Subscribe</button></span>
+                <div id="mce-responses"></div>
+                <div id="mce-error-response" style="display:none" class="response"></div>
+                <div id="mce-success-response" style="display:none" class="response"></div>
+              </div>
+            </form>
+            <!-- End MailChimp Signup Form--><img src="img/misc/mailchimp.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    
+    <div class="section-small action bg-gray text-center"><a href="portfolio-masonry-4.html" class="btn btn-dark-border">View All Portfolio</a></div>
+    <!-- Team Section-->
+    <section id="team" class="bg-white text-center">
+      <div class="container">
+        <h3>MEET OUR LEADERS</h3>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <p><img src="img/team/avatar1.jpg" alt="" class="img-responsive center-block"></p>
+            <h2 class="classic">James Daniels</h2>
+            <ul class="list-inline">
+              <li><a href="/"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-facebook fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-google-plus fa-lg"></i></a></li>
+            </ul>
+            <h6>CEO</h6>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <p><img src="img/team/avatar2.jpg" alt="" class="img-responsive center-block"></p>
+            <h2 class="classic">Michael Williams</h2>
+            <ul class="list-inline">
+              <li><a href="/"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-youtube fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-steam fa-lg"></i></a></li>
+            </ul>
+            <h6>Manager</h6>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <p><img src="img/team/avatar3.jpg" alt="" class="img-responsive center-block"></p>
+            <h2 class="classic">Ethan Oliver</h2>
+            <ul class="list-inline">
+              <li><a href="/"><i class="fa fa-facebook fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-instagram fa-lg"></i></a></li>
+            </ul>
+            <h6>Developer</h6>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <p><img src="img/team/avatar4.jpg" alt="" class="img-responsive center-block"></p>
+            <h2 class="classic">Charlotte Harrison</h2>
+            <ul class="list-inline">
+              <li><a href="/"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-github fa-lg"></i></a></li>
+              <li><a href="/"><i class="fa fa-pinterest fa-lg"></i></a></li>
+            </ul>
+            <h6>Designer</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    
+    
+ 
+   {% endblock %}

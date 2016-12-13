@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+{# {% load i18n mptt_tags %} #}
+{% load thumbnail %}
+{% load content_tags %}
+
+{% block device %}
+
+
+ 
+   
+ <!-- Devices Section-->
+    <section id="testimonials">
+    <div class="small-header bg-white">
+    </div>
+      <div class="container">
+       
+        <div class="row_products">
+
+            
+          <div class="col-md-9 col-md-offset-3">
+
+              <div class="col-md-9">
+
+                <div class="device">
+
+                <h2>{{ current_product.product_title }}</h2>
+
+                
+
+                <h1>{{ current_product.slogan }}</h1>
+
+               <h3><a href="#0">Buy</a></span></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#0">Support</a></h3>
+
+                </div>
+
+
+                <img src="{{ current_product.slug }}" alt="" class="img-responsive center-block">
+
+                <div class="device_bottom">
+
+                <h3><a href="#0">Buy</a></span></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#0">Support</a></h3>
+
+                </div>
+                
+              </div>
+          </div>
+           
+        </div>
+
+      </div>
+    </section>
+ 
+
+
+  
+   {% endblock %}

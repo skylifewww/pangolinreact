@@ -1,0 +1,27 @@
+{% if is_paginated %}
+    <ul class="pagination">
+        {% if page_obj.has_previous() %}
+            <li><a href="{{ set_param(request, page=page_obj.previous_page_number()) }}">&lt;</a></li>
+            <li><a href="{{ set_param(request, page=1) }}">1</a></li>
+        {% endif %}
+
+        {% if page_obj.number > 3 %}<li><a href="#">...</a></li>{% endif %}
+
+        {% if page_obj.has_previous() and page_obj.previous_page_number() != 1 %}
+            <li><a href="{{ set_param(request, page=page_obj.previous_page_number()) }}">{{ page_obj.previous_page_number() }}</a></li>
+        {% endif %}
+
+        <li class="active"><a href="#">{{ page_obj.number }}</a></li>
+
+        {% if page_obj.has_next() and page_obj.next_page_number() != page_obj.paginator.num_pages %}
+            <li><a href="{{ set_param(request, page=page_obj.next_page_number()) }}">{{ page_obj.next_page_number() }}</a></li>
+        {% endif %}
+
+        {% if page_obj.number != page_obj.paginator.num_pages and page_obj.paginator.num_pages != page_obj.next_page_number() and page_obj.paginator.num_pages != page_obj.number + 2 %}<li><a href="#">...</a></li>{% endif %}
+
+        {% if page_obj.has_next() %}
+            <li><a href="{{ set_param(request, page=page_obj.paginator.num_pages) }}">{{ page_obj.paginator.num_pages }}</a></li>
+            <li><a href="{{ set_param(request, page=page_obj.next_page_number()) }}">&gt;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

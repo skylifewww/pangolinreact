@@ -1,0 +1,250 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+{% load i18n mptt_tags %}
+{% load thumbnail %}
+
+{% block article %}
+<!-- Top Background Image Wrapper -->
+
+{# <div class="bgded overlay" style="background-image: url({{ article.slug }})">  #}
+<div class="bgded overlay" style="background-image:url('/static/pharmacognosy/images/backgrounds/01.png');">
+  <!-- ################################################################################################ -->
+  <div class="wrapper">
+    <header id="headerArticle" class="hoc clear">
+      {# <div id="logo">  #}
+        <!-- ################################################################################################ -->
+        {# <h1><a href="../index.html">Penyler</a></h1> #}
+        {# <p>risus luctus eget</p> #}
+        <!-- ################################################################################################ -->
+      {# </div> #}
+      <nav id="mainav" class="clear"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+           <li><a href="/">Home</a></li>
+          {# <li><a href="/articles/">Лекции</a></li> #}
+          <li><a href="/contact/">Контакты</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+  <div class="content three_quarter first"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+
+
+    {% for article in articles %}
+
+    <div class="content two_quarter"> 
+
+      <!-- ################################################################################################ -->
+<h8>Курс лекцій: <a href="/articles/category/get/{{ article.article_category.id }}/">{{ article.article_category }}</a></h8>
+
+<div class="clear"></div>  
+
+<h8>Автор: <a href="/articles/author/get/{{ article.article_author.id }}/">{{ article.article_author }}</a></h8>
+<p></p>
+
+
+      <h1><a href="/articles/article/get/{{ article.article_category.id }}/{{ article.id }}/" class="articleTitle">{{ article.article_title }}</a></h1>
+     
+      <p>{{ article.short_text|safe }}</p>
+      <div class="clear"></div>  
+      
+      {# <h6></h6> #}
+      {# <img class="imgGroundArt" src="{% static 'pharmacognosy/images/camomile.png' %}" alt=""> #}
+
+</div>
+
+<div class="content one_quarter second">   
+
+{% if article.video_published %}
+    
+            {% video article.article_video '220x160' %}
+{% else %} 
+
+    {% if article.slug %}
+
+        {% if current_category or current_author or current_tag %}
+
+            <a href="/articles/article/get/{{ article.article_category.id }}/{{ article.id }}/"><img class="imgArticle" src="{{ article.slug }}"></a>
+
+        {% else %} 
+
+            <a href="/articles/article/get/{{ article.article_category.id }}/{{ article.id }}/"><img class="imgArticle" src="{{ article.slug }}"></a>
+            {# <img src="{{MEDIA_URL}}{{ article.image.url}}" width="220px" height="160px"> #}
+
+        {% endif %}    
+            
+    {% else %}    
+
+            <img class="imgArticle" src="{% static 'pharmacognosy/images/pharm.png' %}">    
+
+    {% endif %}
+    
+{% endif %}
+
+</div>        
+      
+      <h6></h6>
+<div class="clear"></div>  
+   
+      <h6></h6>
+<div class="clear"></div>  
+      
+     {% endfor %}
+
+  
+{# </div> #}
+{# <div class="wrapper row3"> #}
+  {# <main class="hoc container clear">  #}
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    
+      <!-- ################################################################################################ -->
+      
+     
+     
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="sidebar one_quarter"> 
+      <!-- ################################################################################################ -->
+      
+      <div class="sdb_holder">
+      <h6>Лекції:</h6>
+      <nav class="sdb_holder">
+       {% recursetree categories %}
+        <ul>
+
+        {% if node == current_category %}
+          <li class="articleTitle"><a href="/articles/category/get/{{ node.id }}/" title="{% blocktrans with project=node %}Показати усі лекції з {{ node }}{% endblocktrans %}">{{ node }}</a><li>
+          {% else %}
+          <li><a href="/articles/category/get/{{ node.id }}/" title="{% blocktrans with project=node %}Показати усі лекції з {{ node }}{% endblocktrans %}">{{ node }}</a>
+           {% endif %}
+
+            {% if node.is_root_node %}
+                {% ifequal node.id root_category_id %}
+                    {% if not node.is_leaf_node %}
+                        <ul>
+                            <li>{{ children }}<li>
+                        </ul>
+                    {% endif %}
+                {% endifequal %}
+            {% else %}
+                {% if not node.is_leaf_node %}
+                    {% if current_category.id == node.id %}
+                        <ul>
+                            <li>{{ children }}<li>
+                        </ul>
+                    {% elif node.level < current_category.level %}
+                        <ul>
+                            <li>{{ children }}<li>
+                        </ul>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+       
+    {% endrecursetree %}
+
+    </ul>
+    </nav>
+
+
+      <div class="sdb_holder">
+        <h6>Теги:</h6>
+
+         <ul> 
+{% for tag in tags %}
+{% if tag == current_tag %}
+<h10><a href="/articles/tag/get/{{ tag.id }}/" class="articleTitle">{{ tag }}</a></h10>
+{% else %}
+<h10><a href="/articles/tag/get/{{ tag.id }}/">{{ tag }}</a></h10>
+ {% endif %}
+ {# {% if not forloop.last %},{% endif %} #}
+ {% endfor %}  
+ </ul>
+       
+      </div>
+      <div class="sdb_holder">
+        <article>
+          <h6>Автори:</h6>
+           {% recursetree authors %}
+        <li>
+        {% if node == current_author %}
+
+          {% if node.slug %}
+          <a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}" class="articleTitle">{{ node }}</a>
+          <a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}"><img class="imgAutorBig border-radius-120" src="{{ node.slug }}" height="140px" width="140px" alt="" class="roundpca"></a></h8>
+           <p><a  href="/contact/" title="{% blocktrans with project=node %}Задать вопрос {{ node }}{% endblocktrans %}" class="authorQs">Задати запитання автору</a></p>
+         <p></p>
+         <h6> </h6>
+          {% else %}
+
+          <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}" class="articleTitle">{{ node }}</a></h8>
+          <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}"><img class="imgAutorBig border-radius: 120px" src="{% static 'pharmacognosy/images/avatar.png' %}"  height="140px"  width="140px" alt="" class="roundpca"></a></h8>
+         <p><a  href="/contact/" title="{% blocktrans with project=node %}Задать вопрос {{ node }}{% endblocktrans %}" class="authorQs">Задати запитання автору</a></p>
+         <p></p>
+         <h6> </h6>
+           {% endif %}
+
+        {% else %}
+
+        {% if node.slug %}
+
+        <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}">{{ node }}</a></h8>
+        <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}"><img class="imgAutorSmall border-radius: 30px" src="{{ node.slug }}" height="40px" width="40px" alt="" class="roundpa"></a></h8>      
+          <p></p>
+         <h6> </h6>
+          {% else %}
+          <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}">{{ node }}</a></h8>
+        <h8><a  href="/articles/author/get/{{ node.id }}/" title="{% blocktrans with project=node %}Show all entries in {{ node }}{% endblocktrans %}"><img class="imgAutorSmall border-radius: 30px" src="{% static 'pharmacognosy/images/avatar.png' %}" height="40px" width="40px" alt="" class="roundpa"></a></h8> 
+        <p></p>
+         <h6> </h6>
+
+          {% endif %}
+        {% endif %}
+
+            {% if node.is_root_node %}
+                {% ifequal node.id root_author_id %}
+                    {% if not node.is_leaf_node %}
+                        <ul class="child">
+                            <h10>{{ children }}</h10>
+                        </ul>
+                    {% endif %}
+                {% endifequal %}
+            {% else %}
+                {% if not node.is_leaf_node %}
+                    {% if current_author.id == node.id %}
+                        <ul class="child">
+                            <h10>{{ children }}</h10>
+                        </ul>
+                    {% elif node.level < current_author.level %}
+                        <ul class="child">
+                            <h10>{{ children }}</h10>
+                        </ul>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+        </article>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+{% endblock %}

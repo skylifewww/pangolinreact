@@ -1,0 +1,472 @@
+ERROR:2016-11-15 00:11:58,494:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:11:58,819:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:13:28,896:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:13:28,983:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:14:09,849:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:14:09,936:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:15:02,854:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048d2f50>.
+ERROR:2016-11-15 00:15:02,854:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048d2f50>.
+ERROR:2016-11-15 00:18:18,243:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:18:54,013:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048cfcd0>.
+ERROR:2016-11-15 00:18:54,013:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048cfcd0>.
+ERROR:2016-11-15 00:19:52,799:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048cdad0>.
+ERROR:2016-11-15 00:19:52,799:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048cdad0>.
+ERROR:2016-11-15 00:24:08,470:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1047c2510>.
+ERROR:2016-11-15 00:24:08,470:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1047c2510>.
+ERROR:2016-11-15 00:24:48,144:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:25:50,577:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:26:09,601:base Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+ERROR:2016-11-15 00:26:32,049:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1047e4510>.
+ERROR:2016-11-15 00:26:32,049:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1047e4510>.
+ERROR:2016-11-15 00:27:23,927:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048e7510>.
+ERROR:2016-11-15 00:27:23,927:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048e7510>.
+ERROR:2016-11-15 00:27:29,308:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048e7510>.
+ERROR:2016-11-15 00:27:29,308:base Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'pangolin/img/favicon.png' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0x1048e7510>.

@@ -1,0 +1,8 @@
+{
+  "name": "pangolin",
+  "description": "Pangolin",
+  "image": "heroku/python",
+  "repository": "https://",
+  "keywords": ["pangolin", "laser", "show" ],
+  "addons": [ "heroku-postgresql" ]
+}

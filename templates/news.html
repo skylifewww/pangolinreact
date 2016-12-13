@@ -1,0 +1,154 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+{# {% load i18n mptt_tags %} #}
+{% load thumbnail %}
+{% load content_tags %}
+
+{% block news %}
+
+
+
+
+    
+    <!-- Subscribe Section-->
+    <section id="subscribe" class="section-small bg-img5 text-center">
+      <div class="overlay-white"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-offset-2">
+            <h3>Subscribe</h3>
+            <h5>Sign-Up For News Updates and Alerts</h5>
+            <!-- MailChimp Signup Form - Replace the form action in the line below with your MailChimp embed action! For more information on how to do this please visit the Docs!-->
+            <form id="mc-embedded-subscribe-form" action="http://forbetterweb.us11.list-manage.com/subscribe/post?u=4f751a6c58b225179404715f0&amp;id=18fc72763a" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="form-inline subscribe-form">
+              <div class="input-group input-group-lg">
+                <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Email address..." class="form-control"><span class="input-group-btn">
+                  <button id="mc-embedded-subscribe" type="submit" name="subscribe" class="btn btn-dark">Subscribe</button></span>
+                <div id="mce-responses"></div>
+                <div id="mce-error-response" style="display:none" class="response"></div>
+                <div id="mce-success-response" style="display:none" class="response"></div>
+              </div>
+            </form>
+            <!-- End MailChimp Signup Form--><img src="img/misc/mailchimp.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- News Block-->
+    <section id="news">
+      <div class="container">
+        <h3 class="pull-left">Latest news</h3>
+        <div class="pull-right">
+          <h5><a href="news3.html">SEE ALL</a></h5>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row grid-pad">
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/3.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/bg-video.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/20.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/9.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/7.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+          <div class="col-sm-4"><a href="news-single-sidebar.html"><img src="img/header/5.jpg" alt="" class="img-responsive center-block">
+              <h5>o tempora, o mores. sem sed dictum</h5></a>
+            <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.</p><a href="news-single.html" class="btn btn-gray btn-xs">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio-->
+    <section id="portfolio" class="bg-gray no-pad-btm">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h3>Portfolio</h3>
+            <ul class="portfolio-sorting list-inline text-center">
+              <li><a href="portfolio-single.html" data-group="all" class="active">All</a></li>
+              <li><a href="portfolio-single.html" data-group="photo">Photo</a></li>
+              <li><a href="portfolio-single.html" data-group="design">Design</a></li>
+              <li><a href="portfolio-single.html" data-group="branding">Branding</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="grid" class="row portfolio-items">
+          <div data-groups="[&quot;design&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/1.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/2.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/13.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;design&quot;, &quot;photo&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/3.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;branding&quot;, &quot;design&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/5.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;photo&quot;, &quot;design&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/6.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+          <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
+            <div class="portfolio-item"><a href="portfolio-single.html"><img src="img/portfolio/7.jpg" alt="">
+                <div class="portfolio-overlay">
+                  <div class="caption">
+                    <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                  </div>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-small action bg-gray text-center"><a href="portfolio-masonry-4.html" class="btn btn-dark-border">View All Portfolio</a></div>
+   
+   
+    
+ 
+   {% endblock %}

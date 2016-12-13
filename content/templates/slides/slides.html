@@ -1,0 +1,53 @@
+{#  <!-- Intro Slider-->
+    <header id="Carousel-intro" data-ride="carousel" class="intro carousel carousel-big slide carousel-fade">
+      <!-- Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#Carousel-intro" data-slide-to="0" class="active"></li>
+        <li data-target="#Carousel-intro" data-slide-to="1"></li>
+        <li data-target="#Carousel-intro" data-slide-to="2"></li>
+        <li data-target="#Carousel-intro" data-slide-to="3"></li>
+        <li data-target="#Carousel-intro" data-slide-to="4"></li>
+        <li data-target="#Carousel-intro" data-slide-to="5"></li>
+        <li data-target="#Carousel-intro" data-slide-to="6"></li>
+      </ol>
+
+       <div class="carousel-inner">
+
+
+  {% for slide in slides %}
+
+  {% if slide.ordering == 1 %}
+
+  <div class="item active">
+          <div style="background-image:url({{ slide.slug }})" class="fill">
+            <div class="intro-body">
+              <h2 data-wow-delay=".4s" class="wow fadeInUp">{{ slide.text1|safe }}</h2>
+              <h3 class="wow fadeInDown">{{ slide.text2|safe }}</h3>
+              <div data-wow-delay="1s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
+            </div>
+          </div>
+        </div>
+
+        {% else %}
+
+  <div class="item">
+          <div style="background-image:url({{ slide.slug }})" class="fill">
+            <div class="intro-body">
+              <h2 data-wow-delay=".4s" class="wow fadeInUp">{{ slide.text1|safe }}</h2>
+              <h1 class="wow fadeInDown">{{ slide.text2|safe }}</h1>
+              <div data-wow-delay="1s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
+            </div>
+          </div>
+        </div>   
+         {% endif %}  
+
+         {% endfor %}
+         </div>
+
+    
+
+      
+
+      <!-- Controls--><a href="#Carousel-intro" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#Carousel-intro" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+    </header>
+    <!-- Slider--> #}

@@ -1,0 +1,257 @@
+{% load staticfiles %}
+{% load content_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+    <link rel="shortcut icon" href="{% static 'pangolin/img/favicon.png' %}">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pangolin
+    </title>
+    <!-- Bootstrap Core CSS-->
+    <link href="{% static 'pangolin/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{% static 'pangolin/auto-hiding-navigation/css/reset.css' %}"> <!-- CSS reset -->
+  <link rel="stylesheet" href="{% static 'pangolin/auto-hiding-navigation/css/style.css' %}"> <!-- Resource style -->
+    <link href="{% static 'pangolin/css/universal.css' %}" rel="stylesheet">
+    
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">	
+  
+    <header class="cd-auto-hide-header">
+
+ 
+  <div class="logo"><a href="/"><img src="{% static 'pangolin/img/pangolin_logo_small.png' %}" alt="Logo"></a></div>
+
+ 
+
+  <nav class="cd-primary-nav">
+    <a href="#cd-navigation" class="nav-trigger">
+      <span>
+        <em aria-hidden="true"></em>
+        {# Menu #}
+      </span>
+    </a> <!-- .nav-trigger -->
+
+    <ul id="cd-navigation">
+      <li><a href="/">Products</a></li>
+      <li><a href="/support/supports/">Support</a></li>
+      <li><a href="/news/">About Us</a></li>
+      <li><a href="/news/">News</a></li>
+      <li><a href="/contact/">Contact</a></li>
+
+       <li><a href="#" class="dropdown-toggle"><i class="fa fa-shopping-bag fa-lg"></i><span class="badge">3</span><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="shop-nav">
+                  <div class="shop-cart"><a href="shop-cart.html"><img src="{% static 'pangolin/img/Beyond.png' %}" alt=" ">
+                      <div class="btn-dark-border btn btn-xs">$128.99</div><i class="fa fa-times float-right"></i><br>Jacket with contrasting hood</a></div>
+                </li>
+                <li class="shop-nav">
+                  <div class="shop-cart"><a href="shop-cart.html"><img src="{% static 'pangolin/img/fb4.png' %}" alt=" ">
+                      <div class="btn-dark-border btn btn-xs">$186.99</div><i class="fa fa-times float-right"></i><br>Jacket with a seam on the lapel</a></div>
+                </li>
+                <li class="shop-nav">
+                  <div class="shop-cart"><a href="shop-cart.html"><img src="{% static 'pangolin/img/laser.png' %}" alt=" ">
+                      <div class="btn-dark-border btn btn-xs">$98.99</div><i class="fa fa-times float-right"></i><br>Faux leather jacket</a></div><span class="text-left">Subtotal:</span><span class="float-right"><b>$386.99</b></span>
+                </li>
+                <li><a href="shop-cart.html"><span class="btn btn-dark-border btn-sm">Checkout</span></a></li>
+              </ul>
+            </li>
+             <li><a href="#" class="dropdown-toggle"><i class="fa fa-search fa-lg"></i><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <form method="post" class="search-form">
+                    <button type="submit" title="Search" class="search-button"><i class="fa fa-search fa-lg"></i></button>
+                    <input type="text" placeholder="SEARCH" class="form-control search-field">
+                  </form>
+                </li>
+              </ul>
+            </li>
+           
+           
+    </ul>
+  </nav> <!-- .cd-primary-nav -->
+
+   <nav class="cd-secondary-nav">
+    <ul>
+
+      {% if products %}
+        {% if current_product %}
+     {# <li><a class="active" href="/products/product/{{current_category.id}}/{{current_product.id}}/">{{ current_product.product_title }}</a></li> #}
+
+      {% for menu_item in menu_items %}
+
+      {% if menu_item.name == "Buy" %}
+
+      <li class="buy"><a href="#0">Buy</a></li>
+
+      {% else %}
+
+      <li class="product"><a href="#0">{{ menu_item.name }}</a></li> 
+
+      {% endif %}
+
+      {% endfor %}
+
+      <li><a href="/products/{{current_category.id}}/">all {{ current_category.name }}s</a></li>
+
+      {% else %}
+
+
+
+      {% for product in products %}
+      
+      <li><a href="/products/product/{{current_category.id}}/{{product.id}}/">{{ product.product_title }}</a></li>
+
+      {% endfor %}
+
+      <li><a href="#0">Accessories</a></li> 
+
+      <li><a href="#0">Compare</a></li> 
+      {# <li class="buy"><a href="#0">Buy</a></li> #}
+
+      {% endif %}
+
+      {% elif supports %}
+      {% for support in supports %}
+
+      <li><a href="/support/support/{{support.id}}/">{{ support.title }}</a></li>
+
+      {% endfor %}
+
+      {% elif categories %}
+      {% for category in categories %}
+
+      <li><a href="/products/{{category.id}}/">{{ category.name }}</a></li>
+
+      {% endfor %}
+
+      
+       {% endif %}
+
+    </ul>
+  </nav> <!-- .cd-secondary-nav -->
+
+  </header> <!-- .cd-auto-hide-header -->
+
+ <div class="small-header bg-gray2"></div>
+
+
+
+  <!-- Content Section-->  
+    
+{% block device %}{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block hardware %}{% endblock %}
+   
+{% block software %}{% endblock %}
+
+{% block news %}{% endblock %} 
+
+{% block support %}{% endblock %} 
+
+{% block contact %}{% endblock %}   
+
+
+
+    
+    <!-- Footer Section-->
+    <section class="section-small footer bg-gray">
+      <div class="container">
+        <div class="row">
+        
+          <div class="col-sm-3 col-sm-offset-1 footer-menu">
+          
+            <h5>Products</h5>
+            {% category_footer %}
+          </div>
+           <div class="col-sm-3 col-sm-offset-1 footer-menu">
+            <h5>Support</h5>
+            {% support_footer %}
+          </div>
+           
+           <div class="col-sm-3 col-sm-offset-1 footer-menu">
+            <h5>Pangolin</h5>
+            <h6 class="no-pad"><a href="/news/">About us</a></h6>
+            <h6 class="no-pad"><a href="/news/">Our Clients</a></h6>
+            <h6 class="no-pad"><a href="/news/">Our Team</a></h6>
+            <h6 class="no-pad"><a href="/contact/">Contact Us</a></h6>
+            <h6 class="no-pad"><a href="/contact/">Register</a></h6>
+            <h6 class="no-pad"><a href="/">Shop</a></h6>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+    <section class="section-small footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h8><a href="https://Pangolin.com">2016 &copy Pangolin Laser Systems Inc.</a>
+            </h8>
+          </div>
+          <div class="col-sm-3 col-sm-offset-1">
+              
+              {# <img src="http://pangolin.com/wp-content/themes/Pangolin/images/pay_cards.png" alt="Payment methods" /> #}
+            
+            
+            
+             {# <h8><a href="/terms-of-service-agreement/">Terms of use</a>|<a href="/privacy-policy/">Privacy Policy</a>|<a href="/use-of-cookies/">We Use Cookies</a>|<a href="/copyright-policy/">Copyright|DMCA policy</a></h8> #}
+            {# <h6>We <i class="fa fa-heart fa-fw"></i> creative people #}
+            
+          </div>
+          <div class="col-sm-3 col-sm-offset-1 text-right">
+            <ul class="list-inline">
+              <li><a href="https://www.twitter.com/PangolinSystems"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.facebook.com/PangolinSystems"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
+              <li><a href="http://www.Youtube.com/PangolinShows"><i class="fa fa-youtube fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/pangolinsystems"><i class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.pinterest.com/pangolinlaser"><i class="fa fa-pinterest fa-fw fa-lg"></i></a></li>
+              <li><a href="https://plus.google.com/+PangolinSystems"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
+              <li><a href="http://i.youku.com/u/UMjE5NTk4NzY4"><i class="fa fa-youtube fa-fw fa-lg"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery-->
+    <script src="{% static 'pangolin/js/jquery-1.12.4.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript-->
+    <script src="{% static 'pangolin/js/bootstrap.min.js' %}"></script>
+    <!-- Plugin JavaScript-->
+    <script src="{% static 'pangolin/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/device.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/form.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.placeholder.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.shuffle.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.parallax.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/jquery.swipebox.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/smoothscroll.min.js' %}"></script>
+    <script src="{% static 'pangolin/js/wow.min.js' %}"></script>
+    
+<script src="{% static 'pangolin/auto-hiding-navigation/js/main.js' %}"></script> <!-- Resource jQuery -->
+  
+        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
+        <script src="{% static 'pangolin/js/map.js' %}"></script>
+    <!-- Custom Theme JavaScript-->
+    <script src="{% static 'pangolin/js/universal.js' %}"></script>
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </body>
+</html>
+  
